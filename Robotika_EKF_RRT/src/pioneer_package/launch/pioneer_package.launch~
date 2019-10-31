@@ -1,0 +1,3 @@
+<launch>
+   <node name="pioneer_package_node" pkg="pioneer_package" type="pioneer_package_node" output="screen" />
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+   <node name="quad_package_uye" pkg="quad_package" type="quad_package_node" output="screen" />
+</launch>
