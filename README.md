@@ -1,5 +1,8 @@
 # EKF-Localization-RRT-Path-Planning-Path-Following-Take-off-Maneuver-Hovering-Landing-UGV-UAV
 
+# Video:
+   + Part 1: https://www.youtube.com/watch?v=fzOL-B-07bc or https://www.youtube.com/watch?v=EAcPxWwW37g&feature=youtu.be
+   + Part 2: https://www.youtube.com/watch?v=4pRkIPMCuYw or 
 # All Feature: 
    + Copyright by:
        <> Sudiro 
