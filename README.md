@@ -115,3 +115,6 @@
 - bezier_spline -> smoothed path
 - RRT -> Proses RRT Path Planning 
       -> bercak merah adalah random value generated
+
+# How To Contribute:
+   Just Send Pull Request
