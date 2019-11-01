@@ -57,7 +57,7 @@
 
 3. Hovering:
    - When keyboard 'P' pressed:
-      # start Path Planning
+   - start Path Planning
    - using P controller [pure from V-REP example with condition addition]
 
 4. Landing:
