@@ -5,8 +5,9 @@
    + Part 2: https://www.youtube.com/watch?v=4pRkIPMCuYw or 
 # All Feature: 
    + Copyright by:
-       <> Sudiro 
-       <> Kecuali yang saya jelaskan lebih di bawah
+       - Sudiro 
+       - Mario Jaya Nugraha
+       - Kecuali yang saya jelaskan lebih di bawah
    + e-mail: SudiroEEN@gmail.com
    + My Site: github.com/sudiroeen
 
