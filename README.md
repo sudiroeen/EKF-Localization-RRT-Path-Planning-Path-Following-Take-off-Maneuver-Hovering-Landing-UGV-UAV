@@ -6,7 +6,8 @@
 # All Feature: 
    + Copyright by:
        - Sudiro
-       - Kecuali yang saya jelaskan lebih di bawah
+       - Mario Jaya Nugraha 
+       - Kecuali yang saya jelaskan lebih di bawah.
    + e-mail: SudiroEEN@gmail.com
    + My Site: github.com/sudiroeen
 
@@ -45,8 +46,8 @@
    
 
                         [Quadrotor / UAV Robot]
-   + All of these feature in Lua Form
-   + "quad_package" is take-off process on Ros-C++ style [But not yet successfull]
++ All of these feature in Lua Form
++ "quad_package" is take-off process on Ros-C++ style [But not yet successfull]
 
 1. Take-Off:
    - using P controller
