@@ -2,8 +2,7 @@
 
 # Video:
    + Part 1: https://www.youtube.com/watch?v=fzOL-B-07bc or https://www.youtube.com/watch?v=EAcPxWwW37g&feature=youtu.be
-   + Part 2: https://www.youtube.com/watch?v=4pRkIPMCuYw or 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/BWt6j2bahIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   + Part 2: https://www.youtube.com/watch?v=4pRkIPMCuYw or https://youtu.be/BWt6j2bahIg
 # All Feature: 
    + Copyright by:
        - Sudiro
