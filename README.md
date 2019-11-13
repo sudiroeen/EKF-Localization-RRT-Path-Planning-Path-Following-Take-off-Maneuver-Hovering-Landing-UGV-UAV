@@ -97,21 +97,20 @@
 
 # How To Use
 
-1. Saat pertama kali, SELAIN package "rrt" dan "common_include" keluarkan dari folder "src/", hal ini karena hierarchy running program mengakhirkan kedua package tersebut.
-2. run di terminal:
+1. At First time, cut EXCEPT "rrt" and "common_include" package from "src/" directory, because on hierarchy, they will be ran lastly, but other package includes them
+2. run on your terminal:
    catkin_make && source devel/setup.bash
-3. setelah sukses, package selain "rrt" dan "common_include" tersebut kembalikan ke dalam folder "src/"
-4. run kembali di terminal:
+3. if success, enter other cut package to "src/" again
+4. run on your terminal:
    catkin_make && source devel/setup.bash
 
-5. setelah sukses JANGAN di roslaunch dulu, karena proses menunggu komunikasi dengan V-REP
+5. after success, DON'T directly run "roslaunch", because node will work after communicate with V-REP, so you must run V-REP firstly
 
-6. oleh karena itu, run V-REP dulu
-
-7. run di terminal:
+6. run your V-REP scene
+7. run on your terminal:
    roslaunch pioneer_package pioneer_package.launch
 
-6. lakukan sesuai deskripsi di file "alur_cerita_robotika.txt"  
+6. do as descripted on "alur_cerita_robotika" section
 
 
 
@@ -121,10 +120,10 @@
 - img_bck -> all
 - tampil_mc -> fitted line using least square to get angle
 
-- path_hasil -> hasil path dari proses path planning
+- path_hasil -> path resulted from Ptah Planning process
 - bezier_spline -> smoothed path
-- RRT -> Proses RRT Path Planning 
-      -> bercak merah adalah random value generated
+- RRT -> RRT Path Planning Process
+      -> red dot is random value generated from RRT Path Planning Process
 
 # How To Contribute:
    Just Send Pull Request
