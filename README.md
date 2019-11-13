@@ -75,7 +75,7 @@
 
 
 
-# Alur cerita:
+# Story:
 
 1. When you run V-REP, quadrotor will start to take-off then maneuver continuousely
 
@@ -110,7 +110,7 @@
 7. run on your terminal:
    roslaunch pioneer_package pioneer_package.launch
 
-6. do as descripted on "alur_cerita_robotika" section
+6. do as descripted on "Story" section
 
 
 
