@@ -77,15 +77,21 @@
 
 # Alur cerita:
 
-1. saat V-REP di run, quadrotor akan take-off kemudian maneuver terus menerus
+1. When you run V-REP, quadrotor will start to take-off then maneuver continuousely
 
-2. untuk menjalankan UGV dan lokalisasi, run perintah "roslaunch pioneer_package pioneer_package.launch" pada terminal
+2. To start UGV motion and Localization, run "roslaunch pioneer_package pioneer_package.launch" on terminal
 
-3. saat tombol 'P' di keyboard ditekan quadrotor akan hovering, di sisi yang lain path planning dengan RRT dimulai, dengan posisi UGV sebagai starting point, dan posisi quadrotor sebagai finish point
+3. To finish Localization, push 'P' key on your keyboard, then Quadrotor will go to do hovering,
 
-4. setelah proses path planning sudah mendapatkan path nya, kemudian tekan tombol sembarang untuk memulai path following oleh UGV
+4. In other side, RRT Path Planning will be starting, with UGV position as starting point, and Quadrotor position as finish point
 
-5. setelah UGV sampai di posisi quadrotor, UGV akan otomatis berhenti, sedangkan quadrotor akan mulai landing.
+5. After RRT gets path, you can start Path Following by push any key on your keyboard, and UGV start to follow that path.
+
+5. After UGV reach x-y quadrotor position (with tolerant error), UGV will stop, and Quadrotor start to do landing
+
+6. After Quadrotor z-position reach UGV, quadrotor will stop, and process finish
+
+7. You can close all process by [Ctrl + C] on your terminal
 
 
 
