@@ -7,7 +7,7 @@
 # All Feature: 
    + Copyright by:
        - Sudiro
-       - Kecuali yang saya jelaskan lebih di bawah.
+       - Another author explained below*
    + e-mail: SudiroEEN@gmail.com
    + My Site: ulur.in/sudiroeen
 
@@ -17,7 +17,7 @@
                         [Differential Driver/ UGV Robot]
 1. Motion:
    - Open Loop Motion for rotational motion
-   - Braitenberg Algorithm [My C++ style of V-REP example]
+   - Braitenberg Algorithm [My C++ style of V-REP example]*
    - code is inside "pioneer_package" package
 
 2. EKF Localization [not yet successfull]
@@ -59,14 +59,14 @@
 3. Hovering:
    - When keyboard 'P' pressed:
    - start Path Planning
-   - using P controller [pure from V-REP example with condition addition]
+   - using P controller [pure from V-REP example with condition addition]*
 
 4. Landing:
    - When UGV robot has been reached the finish path
    - using P controller
 
 
-+ "common_include" package is V-REP API for C++ that allowing me to controller robot using V-REP Built-In Function() using C++ API, copyright by V-REP Community
++ "common_include" package is V-REP API for C++ that allowing me to controller robot using V-REP Built-In Function() using C++ API, copyright by V-REP Community*
 
 # REQUIREMENTS:
    - VREP & VREP API
