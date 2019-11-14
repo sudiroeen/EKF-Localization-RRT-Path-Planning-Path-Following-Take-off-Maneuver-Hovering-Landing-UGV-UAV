@@ -66,7 +66,7 @@
    - using P controller
 
 
-+ "common_include" package is V-REP API for C++ that allowing me to controller robot using V-REP Built-In Function() using C++ API, copyright by V-REP Community*
++ "common_include" package is V-REP API for C++ that allowing me to control robot using V-REP Built-In Function() using C++ API, copyright by V-REP Community*
 
 # REQUIREMENTS:
    - VREP & VREP API
