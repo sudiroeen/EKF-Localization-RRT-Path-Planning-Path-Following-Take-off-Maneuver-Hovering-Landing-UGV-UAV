@@ -213,7 +213,14 @@ public:
   PATH nodePath;
   size_t nstate, stateNow, nextState;
   Point2f TargetNow, posNow;
-  bool rotate = false;
+  bool rotate = true;
+
+  float aim_angle;
+  float etheta;
+
+  float p_gain;
+  float rotate_gain;
+  bool diam;
 
 public:
   void initializeFollowing(PATH path2follow);
@@ -233,6 +240,8 @@ private:
   bool first_ = true;
   bool first_v = true;
   float vpast, vnow;
+
+  void handleRotate();
 
 public:
   std_msgs::Bool state2hover_;
