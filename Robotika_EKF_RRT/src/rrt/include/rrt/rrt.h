@@ -6,12 +6,13 @@
 	This is my library for RRT Path Planniing Algorithm
 
 	Available on my site:
-		github.com/sudiroeen [as soon as uploaded]
+		github.com/sudiroeen
 */
 
 #ifndef RRT_H
 #define RRT_H
 
+#include <bezier_smoothing/bezier_smoothing.h>
 #include <opencv2/opencv.hpp>
 #include <ros/ros.h>
 #include <cstdlib>
@@ -37,7 +38,6 @@ private:
 	bool check_intersect(const KONTUR& obs_, vector<Point2f> sf_line);
 	void getFixedPathFunc(PATH& toIsi, const PATH& pathFull, const vector<int>& ind_parent_, size_t id_p);
 	PATH RRT(const KONTUR& obstacle_, const Point2f& start_, const Point2f& finish_);
-	PATH BezierSpline(PATH fixed_path_);
 #ifdef MANUAL	
 	void mouseCb(int event, int x, int y, int flags, void* userdata);
 #endif
