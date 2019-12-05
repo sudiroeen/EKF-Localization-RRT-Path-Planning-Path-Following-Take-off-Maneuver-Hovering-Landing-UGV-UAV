@@ -18,6 +18,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  bezier_smoothing
 )
 
 find_package(OpenCV REQUIRED) 
