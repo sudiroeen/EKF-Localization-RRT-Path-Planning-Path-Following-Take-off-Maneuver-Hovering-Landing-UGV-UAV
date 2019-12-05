@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   common_include
   rrt
+  bezier_smoothing
   geometry_msgs
   sensor_msgs
 )
