@@ -228,19 +228,44 @@ void Pioneer::initializeFollowing(PATH path2follow){
   TargetNow = nodePath[0];
 }
 
-void Pioneer::pathFollowing(){
-  float aim_angle = calc_angle(posNow, TargetNow);
-  float etheta = aim_angle - orientation_plan;
+void Pioneer::handleRotate(){
+	if(fabs(etheta) > 1 * M_PI/180.0){
+		rotate = true;
+		if(fabs(etheta) > M_PI){
+			// cout << "etheta: " << etheta * 180.0/M_PI << "\t";
+			etheta = -(2*M_PI - etheta);
+			if(etheta < -2*M_PI)
+				etheta = etheta + 4*M_PI;
+			// cout << "etheta: " << etheta * 180.0/M_PI << endl; //"\ter: " << er << endl;
+		}
 
-  float p_gain = 0.9;
-  float rotate_gain = 0.7;
+		if(etheta < 0.0)
+			vLeft = rotate_gain*etheta; 
+		else if(etheta > 0.0)
+			vLeft = -rotate_gain*etheta; 
+		vRight = -vLeft;
+
+	}else{
+		rotate = false;
+		vLeft = vRight = 0.0;
+		diam = true;
+	}
+}
+
+void Pioneer::pathFollowing(){
+  aim_angle = calc_angle(posNow, TargetNow);
+  etheta = aim_angle - orientation_plan;
+
+  p_gain = 0.9;
+  rotate_gain = 0.7;
+  
   state2landing_.data = false;
 
   float ex = fabs(TargetNow.x - posNow.x);
   float ey = fabs(TargetNow.y - posNow.y);
   float er = ex + ey;
 
-  bool diam = false;
+  diam = false;
 
   if(first_){
   	error_now = er;
@@ -259,20 +284,21 @@ void Pioneer::pathFollowing(){
     cout << nodePath_in[q] << endl;
   cout << "posNow: " << pnw << "\t TargetNow: " << tgw << endl;
 
-  if(rotate){
-    if(fabs(er) < 0.8){
+  if(!rotate){
+  	handleRotate();
+    if((fabs(er) < 0.08) && !rotate){
 		cout << "next" << endl;
 		if(stateNow < nstate-1){
 	        stateNow = stateNow + 1;
-	        rotate = false;
+	        rotate = true;
 	    }else{
 	        vRight = vLeft = 0.0;
 	        state2landing_.data = true;
-	        rotate = true;
+	        rotate = false;
 	    }
 
 		TargetNow = nodePath[stateNow];
-    }else{
+    }else if(!rotate){
     	if(!first_ && (error_now < past_error)){
 			vRight = vLeft = p_gain*er;
     	}else{
@@ -284,31 +310,12 @@ void Pioneer::pathFollowing(){
 		cout << "maju\t vLeft: " << vLeft << "\t vRight: " << vRight << endl;
     }
   }else{
-    if(fabs(etheta) > 1 * M_PI/180.0){
-    	if(fabs(etheta) > M_PI){
-    		// cout << "etheta: " << etheta * 180.0/M_PI << "\t";
-    		etheta = -(2*M_PI - etheta);
-    		if(etheta < -2*M_PI)
-    			etheta = etheta + 4*M_PI;
-    		// cout << "etheta: " << etheta * 180.0/M_PI << endl; //"\ter: " << er << endl;
-    	}
-		if(etheta < 0.0){
-			vLeft = rotate_gain*etheta; 
-			vRight = -vLeft;
-		}else if(etheta > 0.0){
-			vLeft = -rotate_gain*etheta; 
-			vRight = -vLeft;
-		}
-    }else{
-		rotate = true;
-		vLeft = vRight = 0.0;
-		diam = true;
-    }
+  	handleRotate();
   }
 
   cout << "etheta: " << etheta * 180.0/M_PI << "\ter: " << er << endl;
 
-  if(first_v && rotate){
+  if(first_v && !rotate){
   	vpast = vRight;
   	vnow = vRight;
   	first_v = false;
